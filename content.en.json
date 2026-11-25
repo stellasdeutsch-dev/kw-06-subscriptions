@@ -110,8 +110,8 @@
       "bg": "media/hero-bg.webp",
       "person": {
         "src": "media/hero-person.webp",
-        "w": 557,
-        "h": 826,
+        "w": 560,
+        "h": 841,
         "alt": "Диас в тёмной куртке и солнечных очках"
       },
       "left": {
@@ -206,8 +206,8 @@
       "bg": "media/cinema.webp",
       "person": {
         "src": "media/form-person-en.webp",
-        "w": 556,
-        "h": 857,
+        "w": 640,
+        "h": 998,
         "alt": "Диас в синей куртке, чёрно-белое фото"
       },
       "phones": [
@@ -286,8 +286,8 @@
       "title": "Частые вопросы",
       "person": {
         "src": "media/faq-person-en.webp",
-        "w": 547,
-        "h": 841,
+        "w": 700,
+        "h": 1092,
         "alt": "Диас улыбается, тёмная куртка"
       },
       "items": [
@@ -331,7 +331,7 @@
       "photo": {
         "src": "media/author-dias.webp",
         "w": 760,
-        "h": 706,
+        "h": 707,
         "alt": "Диас в кепке, чёрно-белый портрет"
       },
       "title": [

@@ -118,7 +118,7 @@
       "person": {
         "src": "media/hero-person-tr.webp",
         "w": 620,
-        "h": 712,
+        "h": 734,
         "alt": "Тимур в тёмно-зелёной рубашке"
       },
       "left": {
@@ -295,7 +295,7 @@
       "person": {
         "src": "media/faq-person.webp",
         "w": 700,
-        "h": 975,
+        "h": 984,
         "alt": "Тимур в тёмно-зелёной рубашке"
       },
       "items": [
@@ -339,7 +339,7 @@
       "photo": {
         "src": "media/author-timur.webp",
         "w": 760,
-        "h": 788,
+        "h": 820,
         "alt": "Тимур, чёрно-белый портрет"
       },
       "title": [

@@ -166,10 +166,10 @@ button { font: inherit; color: inherit; }
 /* декор */
 .decor { position: absolute; pointer-events: none; z-index: 1; height: auto; }
 .decor--leaf { width: 220px; left: max(2%, calc(50% - 640px)); bottom: 60px; transform: rotate(-24deg); opacity: .9; }
-.decor--gem { width: 230px; right: max(1%, calc(50% - 660px)); top: 52%; transform: rotate(18deg); opacity: .85; filter: blur(1px); }
-.decor--key { width: 240px; left: max(-2%, calc(50% - 700px)); bottom: 30px; opacity: .45; filter: blur(2px); transform: rotate(-12deg); }
-.decor--scroll { width: 260px; left: max(-4%, calc(50% - 700px)); top: -30px; opacity: .55; filter: blur(2px); transform: rotate(-28deg); }
-.decor--scroll2 { width: 230px; right: max(-3%, calc(50% - 700px)); top: 10px; opacity: .8; filter: blur(1.5px); transform: rotate(30deg); }
+.decor--gem { width: 230px; right: max(1%, calc(50% - 660px)); top: 52%; transform: rotate(18deg); opacity: .85; }
+.decor--key { width: 240px; left: max(-2%, calc(50% - 700px)); bottom: 30px; opacity: .45; transform: rotate(-12deg); }
+.decor--scroll { width: 260px; left: max(-4%, calc(50% - 700px)); top: -30px; opacity: .55; transform: rotate(-28deg); }
+.decor--scroll2 { width: 230px; right: max(-3%, calc(50% - 700px)); top: 10px; opacity: .8; transform: rotate(30deg); }
 
 /* ===== преимущества (сетка карточек) ===== */
 .bento { padding-top: 70px; background: radial-gradient(ellipse 46% 60% at 50% 42%, var(--teal-glow) 0%, rgba(21,57,59,0) 100%); overflow: hidden; }
@@ -324,8 +324,8 @@ button { font: inherit; color: inherit; }
 .collage__it img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; filter: grayscale(1) contrast(1.05); transition: filter .5s var(--ease), transform .6s var(--ease); }
 .collage__it:hover img { filter: none; transform: scale(1.03); }
 .collage__it--3 { grid-column: 1 / -1; width: 56%; justify-self: center; }
-.collage__gem { position: absolute; right: -30px; bottom: -40px; width: 130px; transform: rotate(14deg); filter: blur(1px); pointer-events: none; }
-.collage__scroll { position: absolute; left: -90px; top: 50%; width: 160px; transform: rotate(-30deg); filter: blur(1.5px); opacity: .9; pointer-events: none; }
+.collage__gem { position: absolute; right: -30px; bottom: -40px; width: 130px; transform: rotate(14deg); pointer-events: none; }
+.collage__scroll { position: absolute; left: -90px; top: 50%; width: 160px; transform: rotate(-30deg); opacity: .9; pointer-events: none; }
 
 /* ===== реклама: скриншоты ===== */
 .shots .wrap, .levels .wrap, .price .wrap { width: min(var(--wrap-wide), 100% - 32px); }
