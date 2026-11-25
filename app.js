@@ -26,7 +26,7 @@
     check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     arrow: '<path d="M7 4c5 1 9 3 6 6s-6 2-3 5 5 2 3 5"/><path d="m9.5 18 3.5 2.5 1-4"/>'
   };
-  function ic(n, cls) { return '<svg class="ic ' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (P[n] || '') + '</svg>'; }
+  function ic(n, cls) { return '<svg class="ic ic-' + n + ' ' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (P[n] || '') + '</svg>'; }
   var STAR = '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.4 5.6 11.1 12 12-6.4.9-11.1 5.6-12 12-.9-6.4-5.6-11.1-12-12C6.4 11.1 11.1 6.4 12 0Z" fill="currentColor"/></svg>';
 
   /* ---------- утилиты ---------- */
