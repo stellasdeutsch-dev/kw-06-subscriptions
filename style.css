@@ -388,7 +388,7 @@ button { font: inherit; color: inherit; }
 .calc__in { position: relative; width: 100%; height: 100%; border-radius: 50%; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: center / cover no-repeat; }
 .calc__in::before { content: ""; position: absolute; inset: 0; background: rgba(6, 8, 9, .72); }
 .calc__big, .calc__cap { position: relative; }
-.calc__big { font: 600 112px/1 var(--f-head); color: var(--teal); letter-spacing: -.01em; }
+.calc__big { white-space: nowrap; font: 600 82px/1 var(--f-head); color: var(--teal); letter-spacing: -.01em; }
 .calc__cap { font-size: 21px; font-weight: 300; color: #d6d6d6; margin-top: 10px; max-width: 220px; }
 .calc__card { padding: 40px 40px 34px; }
 .calc__card .notch__tab { width: 240px; height: 56px; top: -28px; }
@@ -453,7 +453,7 @@ button { font: inherit; color: inherit; }
   .price__grid { gap: 24px; }
   .calc__grid { grid-template-columns: 300px minmax(0, 1fr); gap: 40px; }
   .calc__ring { width: 300px; }
-  .calc__big { font-size: 84px; }
+  .calc__big { font-size: 62px; }
 }
 
 /* ===== телефон 390 ===== */
@@ -571,7 +571,7 @@ button { font: inherit; color: inherit; }
   .end__card { padding: 50px 22px 40px; }
   .calc__grid { grid-template-columns: 1fr; gap: 60px; }
   .calc__ring { width: min(290px, 100%); margin: 0 auto; }
-  .calc__big { font-size: 80px; }
+  .calc__big { font-size: 56px; }
   .calc__cap { font-size: 17px; }
   .calc__card { padding: 40px 20px 26px; }
   .calc__n { font-size: 40px; }
