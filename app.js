@@ -1,4 +1,4 @@
-/* Сборщик страницы: читает window.SITE из content.js и рисует блоки.
+/* Сборщик страницы: читает window.SITE (его вписывает build.py из content.en.json / content.tr.json) и рисует блоки.
    Страница: <body data-page="full"> (с рекламой) или data-page="lesson" (без рекламы). */
 (function () {
   var S = window.SITE, D = document;
@@ -195,6 +195,14 @@
       '</div></div></section>';
   };
 
+  R.calc = function (b) {
+    var list = b.counters.map(function (c) { return '<li><span class="calc__n metal-warm" data-count="' + c.n + c.suf + '">' + c.n + c.suf + '</span><span class="calc__t">' + esc(c.text) + '</span></li>'; }).join('');
+    return '<section class="sec calc"><div class="wrap">' + head(b.script, b.title) + '<div class="calc__grid">' +
+      '<div class="calc__ring"><div class="calc__in" style="background-image:url(' + src('media/cinema.webp') + ')"><p class="calc__big">' + esc(b.circle.big) + '</p><p class="calc__cap">' + esc(b.circle.text) + '</p></div></div>' +
+      notchCard('<ul class="calc__list">' + list + '</ul><p class="calc__formula">' + md(b.formula) + '</p>' + btn(b.cta.label, link(b.cta.link), 'btn--block'), 'calc__card') +
+      '</div></div><img class="decor decor--leaf2" src="' + src('media/decor-leaf.webp') + '" width="426" height="304" alt="" loading="lazy"></section>';
+  };
+
   R.price = function (b) {
     var cards = b.cards.map(function (c) {
       return notchCard('<h3 class="metal price__name">' + esc(c.name) + '</h3><p class="price__sum metal-warm">' + esc(c.price) + '</p><p class="price__sub">' + esc(c.sub) + '</p>' +
@@ -255,9 +263,22 @@
     note.innerHTML = ok === chk.fields.length ? md(r.all) : md(ok ? r.some : r.none) + esc(right.join('; '));
   });
 
+  /* ---------- счётчики ---------- */
+  var nums = D.querySelectorAll('[data-count]');
+  function runCount(el) {
+    var m = String(el.getAttribute('data-count')).match(/^(\d+)(.*)$/); if (!m) return;
+    var to = +m[1], suf = m[2], t0 = null, dur = 1300;
+    function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / dur); k = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(to * k) + suf; if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if (!reduce && 'IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { runCount(x.target); cio.unobserve(x.target); } }); }, { threshold: .6 });
+    nums.forEach(function (el) { cio.observe(el); });
+  }
+
   /* ---------- появление при прокрутке ---------- */
   if (!reduce && 'IntersectionObserver' in window) {
-    var els = D.querySelectorAll('.sh, .bc, .notch, .acard, .shot, .lvl, .ring, .rules__col li, .qa, .faq__person, .collage__it');
+    var els = D.querySelectorAll('.sh, .bc, .notch, .acard, .shot, .lvl, .ring, .calc__ring, .rules__col li, .qa, .faq__person, .collage__it');
     els.forEach(function (el) { el.classList.add('rv'); });
     var io = new IntersectionObserver(function (en) {
       en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
