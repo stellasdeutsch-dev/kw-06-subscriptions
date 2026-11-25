@@ -587,3 +587,56 @@ button { font: inherit; color: inherit; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .rv { opacity: 1; transform: none; }
 }
+
+/* ===== 4а. живой сайт: иконки, картинки, анимации ===== */
+.ichip { display: inline-grid; place-items: center; width: 36px; height: 36px; flex: none; border-radius: 50%; background: rgba(246, 196, 141, .12); border: 1px solid rgba(246, 196, 141, .35); color: var(--peach-1); font-size: 17px; transition: transform .35s var(--ease); }
+.rules__col li { gap: 14px; }
+.rules__line { flex: none; width: 28px; height: 1px; background: rgba(246, 196, 141, .55); transform-origin: left center; transition: transform .6s var(--ease) .25s; }
+.rules__col--l .rules__line { transform-origin: right center; }
+.rules__col li.rv .rules__line { transform: scaleX(0); }
+.rules__col li.rv.in .rules__line { transform: none; }
+.rules__col li:hover .ichip { transform: translateY(-2px) rotate(-8deg); }
+.rules__t { max-width: 190px; }
+.qa__lead { display: inline-grid; place-items: center; width: 30px; height: 30px; flex: none; border-radius: 8px; background: rgba(246, 196, 141, .1); color: var(--peach-1); font-size: 16px; transition: transform .35s var(--ease); }
+.qa__txt { flex: 1; }
+.qa__q { justify-content: flex-start; }
+.qa:hover .qa__lead { transform: translateX(2px) rotate(-6deg); }
+.chips { list-style: none; margin: 18px 0 4px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px 7px 10px; border: 1px solid #3a3d3e; border-radius: 999px; font-size: 13px; color: #d6d6d6; transition: border-color .3s, transform .35s var(--ease); }
+.chips li .ic { font-size: 16px; color: var(--peach-1); }
+.chips li:hover { border-color: var(--peach-1); transform: translateY(-2px); }
+.stat__ic { display: block; margin: 0 auto 6px; width: 24px; height: 24px; color: var(--peach-ink); font-size: 24px; transition: transform .35s var(--ease); }
+.bc--stat:hover .stat__ic { transform: translateY(-3px) rotate(-6deg); }
+.lvl__ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(246, 196, 141, .1); color: var(--peach-1); font-size: 22px; margin-bottom: 16px; transition: transform .35s var(--ease); }
+.lvl:hover .lvl__ic { transform: translateY(-3px) rotate(-6deg); }
+.calc__list .ichip { margin-bottom: 6px; }
+.price__list .ichip { width: 30px; height: 30px; font-size: 15px; }
+.price__list li { align-items: center; }
+.bc__badge { transition: transform .35s var(--ease); }
+.bc:hover .bc__badge { transform: translateY(-2px) rotate(-10deg); }
+.btn:active, .pillbtn:active { transform: translateY(1px) scale(.98); }
+.hero__obj { position: absolute; left: calc(50% - 600px); top: 470px; width: 200px; height: auto; z-index: 3; pointer-events: none; transform: rotate(-6deg); }
+.price__sum.rv { opacity: 0; transform: scale(.7); transition: opacity .5s var(--ease), transform .6s cubic-bezier(.34, 1.56, .64, 1); }
+.price__sum.rv.in { opacity: 1; transform: none; }
+.rv { transform: translateY(20px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+@media (max-width: 1100px) {
+  .hero__obj { left: 24px; top: 440px; width: 150px; }
+}
+@media (max-width: 760px) {
+  .hero__obj { position: absolute; left: auto; right: 10px; top: 520px; width: 112px; }
+  .rules__line { display: none; }
+  .rules__t { max-width: none; }
+  .chips li { font-size: 12.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rules__col li.rv .rules__line, .price__sum.rv { transform: none; opacity: 1; }
+}
+/* правки после просмотра: шире колонки правил, предметы по теме без бледности */
+.rules .wrap { width: min(var(--wrap-wide), 100% - 32px); }
+.rules__line { width: 20px; }
+.decor { opacity: .95 !important; }
+.decor--key { width: 190px; left: max(1%, calc(50% - 660px)); bottom: 70px; transform: rotate(-10deg); }
+.decor--scroll { width: 190px; left: auto; right: max(1%, calc(50% - 660px)); top: 60px; transform: rotate(8deg); }
+.decor--leaf { width: 210px; transform: rotate(-6deg); }
+@media (max-width: 760px) { .decor--key { display: block; width: 110px; left: auto; right: 8px; bottom: 16px; } .decor--scroll { display: block; width: 100px; top: 24px; right: 4px; } }
+@media (max-width: 760px) { .decor--key, .decor--scroll, .decor--leaf { display: none !important; } }
