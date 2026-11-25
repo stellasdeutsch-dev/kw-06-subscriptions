@@ -35,7 +35,7 @@
   function src(p) { return /^https?:/.test(p) ? p : BASE + p; }
   function img(o, cls, eager) {
     return '<img class="' + (cls || '') + '" src="' + src(o.src) + '"' + (o.w ? ' width="' + o.w + '" height="' + o.h + '"' : '') +
-      ' alt="' + esc(o.alt || '') + '"' + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
+      ' alt="' + esc(o.alt || '') + '"' + (o.pos ? ' style="object-position:' + esc(o.pos) + '"' : '') + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
   }
   function link(k) { return S.links[k] || k; }
   function ext(href) { return /^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''; }
@@ -74,7 +74,7 @@
       '<div class="wrap hero__in">' +
       '<div class="hero__mtitle metal" aria-hidden="true">' + b.left.title.concat(b.right.title).map(function (l) { return '<span>' + esc(l) + '</span>'; }).join('') + '</div>' +
       side(b.left, 'hero__side--l') + side(b.right, 'hero__side--r') +
-      '<div class="hero__person">' + img(b.person, '', true) + '</div>' +
+      '<div class="hero__person photo">' + img(b.person, '', true) + '</div>' +
       R.marquee({ hero: true }) +
       '<p class="hero__text">' + md(b.text) + '</p>' +
       '<div class="hero__cta">' + btn(b.cta.label, b.cta.href, 'btn--xl') + '</div>' +
@@ -109,7 +109,7 @@
     }).join('');
     var left = '<div class="check__media" aria-hidden="false">' +
       b.phones.map(function (p, i) { return '<div class="phone phone--' + (i + 1) + '"><img src="' + src(p.src) + '" alt="' + esc(p.alt) + '" loading="lazy" decoding="async" width="540" height="1169"></div>'; }).join('') +
-      img(b.person, 'check__person') + '</div>';
+      '<div class="photo check__person">' + img(b.person) + '</div></div>';
     var right = '<form class="check__form" novalidate><h2 class="metal check__title">' + b.title.map(function (l) { return '<span>' + esc(l) + '</span>'; }).join('') + '</h2>' +
       '<p class="script check__script">' + esc(b.script) + '</p><p class="check__text">' + md(b.text) + '</p>' + fields +
       '<button class="btn btn--block" type="submit"><span class="btn__glow" aria-hidden="true"></span><span class="btn__t">' + esc(b.button) + '</span>' + ic('fire', 'btn__ic') + '</button>' +

@@ -116,10 +116,11 @@
       "id": "top",
       "bg": "media/hero-bg.webp",
       "person": {
-        "src": "media/hero-person-tr.webp",
-        "w": 620,
-        "h": 734,
-        "alt": "Тимур в тёмно-зелёной рубашке"
+        "src": "media/p-timur-hero.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 30%",
+        "alt": "Тимур в тёмном поло у белой стены"
       },
       "left": {
         "script": "türkçe",
@@ -212,10 +213,11 @@
       "id": "check",
       "bg": "media/cinema.webp",
       "person": {
-        "src": "media/form-person.webp",
-        "w": 640,
-        "h": 908,
-        "alt": "Тимур в тёмной рубашке поло, чёрно-белое фото"
+        "src": "media/p-timur-form.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 30%",
+        "alt": "Тимур в тёмно-зелёной рубашке у белой стены"
       },
       "phones": [
         {
@@ -293,10 +295,11 @@
       "script": "Отвечаем на самые",
       "title": "Частые вопросы",
       "person": {
-        "src": "media/faq-person.webp",
-        "w": 700,
-        "h": 984,
-        "alt": "Тимур в тёмно-зелёной рубашке"
+        "src": "media/p-timur-faq.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 30%",
+        "alt": "Тимур в тёмном поло с ноутбуком у белой стены"
       },
       "items": [
         {
@@ -337,10 +340,11 @@
       "type": "author",
       "only": "full",
       "photo": {
-        "src": "media/author-timur.webp",
-        "w": 760,
-        "h": 820,
-        "alt": "Тимур, чёрно-белый портрет"
+        "src": "media/p-timur-author.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 30%",
+        "alt": "Тимур в тёмно-зелёной рубашке у белой стены"
       },
       "title": [
         "Alterna",

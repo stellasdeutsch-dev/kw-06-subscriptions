@@ -1,16 +1,17 @@
 # Люди на сайте 06
 
-Вырезано скилом `cutout` из полноразмерного оригинала, край почищен `defringe.py` (у Тимура ещё убраны светлые точки стены в волосах), потом уменьшено и сжато в webp.
+Людей не вырезаем: каждое фото стоит целиком, как снято, со своим фоном, в скруглённой рамке 3:4 (форма плашек образца).
+Кадр в рамке держит лицо (`object-position` в JSON). Снимки Тимура вертикальные в полный рост, поэтому из оригинала вырезан прямоугольник 3:4 от макушки до бёдер: голова, плечи и руки целиком, фон свой. В блоках «Проверь себя» и «Автор» фото чёрно-белое через CSS, как в образце; фон не тронут.
 
-| Файл на сайте | Страница | Исходный файл | Кто |
+| Файл на сайте | Страница, блок | Исходный файл | Кто |
 |---|---|---|---|
-| `media/hero-person.webp` | `/en/` первый экран | `~/dias/dias photos/IMG_6001.HEIC` (= `~/dias/shared/dias-photos-web/dias-IMG_6001.webp`) | Диас |
-| `media/form-person-en.webp` | `/en/` «Проверь себя», ч/б | `~/dias/dias photos/IMG_9772.HEIC` (= `dias-photos-web/dias-IMG_9772.webp`) | Диас |
-| `media/faq-person-en.webp` | `/en/` вопросы | `~/dias/dias photos/IMG_6013.HEIC` (= `dias-photos-web/dias-IMG_6013.webp`, Колизей) | Диас |
-| `media/author-dias.webp` | `/en/` карточка автора, ч/б | `~/dias/dias photos/IMG_8989 (3).HEIC` (= `dias-photos-web/dias-IMG_8989-3.webp`) | Диас |
-| `media/hero-person-tr.webp` | `/tr/` первый экран | `~/dias/timur-video/IMG_2850.HEIC` (зелёный свитер, белая стена) | Тимур |
-| `media/form-person.webp` | `/tr/` «Проверь себя», ч/б | `~/dias/timur-video/IMG_2844.HEIC` (тёмное поло, белая стена) | Тимур |
-| `media/faq-person.webp` | `/tr/` вопросы | `~/dias/timur-video/IMG_2856.HEIC` (зелёный свитер) | Тимур |
-| `media/author-timur.webp` | `/tr/` карточка автора, ч/б | `~/dias/timur-video/IMG_2855.HEIC` (зелёный свитер) | Тимур |
+| `media/p-dias-hero.webp` | `/en/` первый экран | `~/dias/shared/dias-photos-web/dias-IMG_7362.webp` (тёмные очки, синее поло) | Диас |
+| `media/p-dias-form.webp` | `/en/` «Проверь себя» | `~/dias/shared/dias-photos-web/dias-IMG_9772.webp` (синяя куртка) | Диас |
+| `media/p-dias-faq.webp` | `/en/` вопросы | `~/dias/shared/dias-photos-web/dias-IMG_6013.webp` (Колизей) | Диас |
+| `media/p-dias-author.webp` | `/en/` карточка автора | `~/dias/shared/dias-photos-web/dias-IMG_8898-3.webp` (кофе) | Диас |
+| `media/p-timur-hero.webp` | `/tr/` первый экран | `~/dias/timur-video/IMG_2845.HEIC` (тёмное поло, белая стена) | Тимур |
+| `media/p-timur-form.webp` | `/tr/` «Проверь себя» | `~/dias/timur-video/IMG_2850.HEIC` (тёмно-зелёная рубашка) | Тимур |
+| `media/p-timur-faq.webp` | `/tr/` вопросы | `~/dias/timur-video/IMG_2843.HEIC` (тёмное поло, ноутбук) | Тимур |
+| `media/p-timur-author.webp` | `/tr/` карточка автора | `~/dias/timur-video/IMG_2855.HEIC` (тёмно-зелёная рубашка) | Тимур |
 
-Других людей на сайте нет. Скриншоты платформ (`dias-*`, `timur-*`) без людей-авторов.
+Других людей на сайте нет. Вырезаны только предметы (`decor-*.webp`: кристалл, свиток, лист, ключ) скилом `cutout` + `defringe.py`.

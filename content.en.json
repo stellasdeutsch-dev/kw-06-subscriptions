@@ -109,10 +109,11 @@
       "id": "top",
       "bg": "media/hero-bg.webp",
       "person": {
-        "src": "media/hero-person.webp",
-        "w": 560,
-        "h": 841,
-        "alt": "Диас в тёмной куртке и солнечных очках"
+        "src": "media/p-dias-hero.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 40%",
+        "alt": "Диас в тёмных очках и синем поло на пляже"
       },
       "left": {
         "script": "english",
@@ -205,10 +206,11 @@
       "id": "check",
       "bg": "media/cinema.webp",
       "person": {
-        "src": "media/form-person-en.webp",
-        "w": 640,
-        "h": 998,
-        "alt": "Диас в синей куртке, чёрно-белое фото"
+        "src": "media/p-dias-form.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 45%",
+        "alt": "Диас в синей куртке на смотровой площадке"
       },
       "phones": [
         {
@@ -285,10 +287,11 @@
       "script": "Отвечаем на самые",
       "title": "Частые вопросы",
       "person": {
-        "src": "media/faq-person-en.webp",
-        "w": 700,
-        "h": 1092,
-        "alt": "Диас улыбается, тёмная куртка"
+        "src": "media/p-dias-faq.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 45%",
+        "alt": "Диас улыбается внутри Колизея"
       },
       "items": [
         {
@@ -329,10 +332,11 @@
       "type": "author",
       "only": "full",
       "photo": {
-        "src": "media/author-dias.webp",
-        "w": 760,
-        "h": 707,
-        "alt": "Диас в кепке, чёрно-белый портрет"
+        "src": "media/p-dias-author.webp",
+        "w": 900,
+        "h": 1200,
+        "pos": "50% 40%",
+        "alt": "Диас с чашкой кофе в римском кафе"
       },
       "title": [
         "Dias",
